@@ -7,7 +7,7 @@
 - Douglas Delfino  [Linkedln](https://www.linkedin.com/in/douglas-delfino-b305211ab/)
 
 ## Informações do GLPI
-### Versão utilizada do glpi - 10.0.10
+### Versão utilizada do GLPI - 10.0.10
 ### Sistema operacional utilizado - Ubuntu Server 22.04 LTS
 ### Plugins utilizados:
 + Alertas
@@ -22,3 +22,6 @@
 + Costs
 + Imprimir em PDF
 + Oauth IMAP
+
+## Documentação para mais informações do GLPI:
+[Documentação do GLPI](https://glpi-install.readthedocs.io/en/latest/)
