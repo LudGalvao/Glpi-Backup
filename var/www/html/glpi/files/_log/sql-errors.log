@@ -1,0 +1,2609 @@
+[2023-10-25 13:54:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: SELECT '< 1 year' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                           FROM glpi_computers as c,
+                                glpi_infocoms  as i
+                           WHERE c.`id` = i.`items_id`
+                             AND c.`is_deleted` = 0
+                             AND c.`is_template` = 0
+                             AND itemtype = 'Computer'
+                              AND c.`entities_id` IN ('0', '1')
+                             ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 1 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT '1-3 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 1 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 3 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT '3-5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 3 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT '> 5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT 'Undefined' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+            AND i.`warranty_date` IS NULL
+             AND c.`entities_id` IN ('0', '1')
+            
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:296 
+  marketplace/mreporting/inc/inventory.class.php:189 PluginMreportingInventory->computersByAge()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportPieComputersByAge()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181"} 
+[2023-10-25 13:54:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: SELECT '< 1 year' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                           FROM glpi_computers as c,
+                                glpi_infocoms  as i
+                           WHERE c.`id` = i.`items_id`
+                             AND c.`is_deleted` = 0
+                             AND c.`is_template` = 0
+                             AND itemtype = 'Computer'
+                              AND c.`entities_id` IN ('0', '1')
+                             ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 1 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT '1-3 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 1 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 3 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT '3-5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 3 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT '> 5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '1')
+           
+         UNION
+         SELECT 'Undefined' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '1')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+            AND i.`warranty_date` IS NULL
+             AND c.`entities_id` IN ('0', '1')
+            
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:296 
+  marketplace/mreporting/inc/inventory.class.php:194 PluginMreportingInventory->computersByAge()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportHbarComputersByAge()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181","mem_usage":"0.026\", 2.66Mio)"} 
+[2023-10-25 13:54:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: 
+ SELECT 'Windows' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Windows'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'Linux' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Linux|Ubuntu|openSUSE'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'Solaris' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Solaris'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'AIX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'AIX'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'BSD' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'BSD'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'VMWare' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'VMWare'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'MAC' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'MAC'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'Android' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Android'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'HP-UX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'HP-UX'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION
+         SELECT 'Outros' AS OS, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers        as c,
+                                         glpi_operatingsystems as os,
+                                         glpi_items_operatingsystems as ios
+                                    WHERE c.`is_deleted`= 0
+                                          AND c.`is_template`=0
+                                          AND ios.`operatingsystems_id` = os.`id`
+                                          AND ios.items_id = c.id
+                                           AND c.`entities_id` IN ('0', '1')
+                                          ) as Percent
+         FROM glpi_computers        as c,
+              glpi_operatingsystems as os,
+              glpi_items_operatingsystems as ios
+         WHERE ios.`operatingsystems_id` = os.`id`
+           AND ios.items_id = c.id
+           AND ios.itemtype = 'Computer'
+           AND c.`is_deleted` = 0
+           AND c.`is_template`=0
+            AND os.`name` NOT REGEXP 'Windows' AND os.`name` NOT REGEXP 'Linux|Ubuntu|openSUSE' AND os.`name` NOT REGEXP 'Solaris' AND os.`name` NOT REGEXP 'AIX' AND os.`name` NOT REGEXP 'BSD' AND os.`name` NOT REGEXP 'VMWare' AND os.`name` NOT REGEXP 'MAC' AND os.`name` NOT REGEXP 'Android' AND os.`name` NOT REGEXP 'HP-UX'
+            AND c.`entities_id` IN ('0', '1')
+            ORDER BY Total DESC
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:388 
+  marketplace/mreporting/inc/inventory.class.php:312 PluginMreportingInventory->computersByOS()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportPieComputersByOS()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181","mem_usage":"0.036\", 2.70Mio)"} 
+[2023-10-25 13:54:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: 
+ SELECT 'Windows' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Windows'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'Linux' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Linux|Ubuntu|openSUSE'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'Solaris' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Solaris'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'AIX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'AIX'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'BSD' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'BSD'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'VMWare' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'VMWare'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'MAC' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'MAC'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'Android' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Android'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION 
+ SELECT 'HP-UX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '1')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'HP-UX'
+                      AND c.`entities_id` IN ('0', '1')
+                      UNION
+         SELECT 'Outros' AS OS, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers        as c,
+                                         glpi_operatingsystems as os,
+                                         glpi_items_operatingsystems as ios
+                                    WHERE c.`is_deleted`= 0
+                                          AND c.`is_template`=0
+                                          AND ios.`operatingsystems_id` = os.`id`
+                                          AND ios.items_id = c.id
+                                           AND c.`entities_id` IN ('0', '1')
+                                          ) as Percent
+         FROM glpi_computers        as c,
+              glpi_operatingsystems as os,
+              glpi_items_operatingsystems as ios
+         WHERE ios.`operatingsystems_id` = os.`id`
+           AND ios.items_id = c.id
+           AND ios.itemtype = 'Computer'
+           AND c.`is_deleted` = 0
+           AND c.`is_template`=0
+            AND os.`name` NOT REGEXP 'Windows' AND os.`name` NOT REGEXP 'Linux|Ubuntu|openSUSE' AND os.`name` NOT REGEXP 'Solaris' AND os.`name` NOT REGEXP 'AIX' AND os.`name` NOT REGEXP 'BSD' AND os.`name` NOT REGEXP 'VMWare' AND os.`name` NOT REGEXP 'MAC' AND os.`name` NOT REGEXP 'Android' AND os.`name` NOT REGEXP 'HP-UX'
+            AND c.`entities_id` IN ('0', '1')
+            ORDER BY Total DESC
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:388 
+  marketplace/mreporting/inc/inventory.class.php:317 PluginMreportingInventory->computersByOS()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportHbarComputersByOS()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181","mem_usage":"0.004\", 2.68Mio)"} 
+[2023-10-30 10:14:39] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_entities` (`id`, `level`, `name`, `completename`, `entities_id`, `comment`, `max_closedate`, `date_creation`, `date_mod`) VALUES ('3', '2', 'Brunel', 'Entidade raiz > Brunel', '0', '', '2023-10-30 10:14:39', '2023-10-30 10:14:39', '2023-10-30 10:14:39')
+  Error: Duplicate entry '0-Brunel' for key 'unicity'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  front/dropdown.common.form.php:62                  CommonDBTM->add()
+  front/entity.form.php:52                           include()
+  {"user":"2@ip-172-31-46-181"} 
+[2023-10-30 10:14:51] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_entities` (`id`, `level`, `name`, `completename`, `entities_id`, `comment`, `max_closedate`, `date_creation`, `date_mod`) VALUES ('3', '2', 'Brunel', 'Entidade raiz > Brunel', '0', '', '2023-10-30 10:14:51', '2023-10-30 10:14:51', '2023-10-30 10:14:51')
+  Error: Duplicate entry '0-Brunel' for key 'unicity'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  front/dropdown.common.form.php:62                  CommonDBTM->add()
+  front/entity.form.php:52                           include()
+  {"user":"2@ip-172-31-46-181"} 
+[2023-10-31 10:50:45] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_costs_entities` (`entities_id`) VALUES (NULL)
+  Error: Column 'entities_id' cannot be null
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/costs/inc/entity.class.php:79          CommonDBTM->add()
+  marketplace/costs/inc/ticket.class.php:123         PluginCostsEntity->getFromDBByEntity()
+  src/Plugin.php:1681                                PluginCostsTicket::postItemForm()
+  ...plication/View/Extension/PluginExtension.php:67 Plugin::doHook()
+  ...tes/8a/8a84a98633283022a4a9855fe339faa5.php:372 Glpi\Application\View\Extension\PluginExtension->callPluginHook()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_35a44e5e6211858220028cfdebc069f0->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src/Ticket.php:4050                                Glpi\Application\View\TemplateRenderer->display()
+  src/TicketTemplate.php:163                         Ticket->showFormHelpdesk()
+  src/TicketTemplate.php:140                         TicketTemplate::showHelpdeskPreview()
+  src/CommonGLPI.php:691                             TicketTemplate::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"2@ip-172-31-46-181"} 
+[2023-11-13 10:32:01] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-11-13 10:33:23] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-11-13 10:34:22] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-11-13 10:34:58] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-11-13 10:36:20] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-11-13 10:39:46] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-11-28 02:40:54] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_tickets_users` (`type`, `use_notification`, `alternative_email`, `tickets_id`, `users_id`) VALUES ('2', '', '', '101', '20')
+  Error: Incorrect integer value: '' for column `glpidb`.`glpi_tickets_users`.`use_notification` at row 1
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  src/CommonITILObject.php:8628                      CommonDBTM->add()
+  src/CommonITILObject.php:2862                      CommonITILObject->updateActors()
+  src/Ticket.php:2220                                CommonITILObject->post_addItem()
+  src/CommonDBTM.php:1324                            Ticket->post_addItem()
+  front/ticket.form.php:74                           CommonDBTM->add()
+  {"user":"20@ip-172-31-46-181"} 
+[2023-12-05 15:55:20] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 15:55:25] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 15:56:03] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('6')
+  Error: Duplicate entry '6-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:23:45] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('13')
+  Error: Duplicate entry '13-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:24:22] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('5')
+  Error: Duplicate entry '5-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:24:44] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:26:57] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:40:37] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:42:30] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:43:34] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:44:22] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:44:59] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 16:46:47] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 20:38:59] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 20:43:49] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-05 20:49:42] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"10@ip-172-31-46-181"} 
+[2023-12-06 11:14:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: SELECT '< 1 year' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                           FROM glpi_computers as c,
+                                glpi_infocoms  as i
+                           WHERE c.`id` = i.`items_id`
+                             AND c.`is_deleted` = 0
+                             AND c.`is_template` = 0
+                             AND itemtype = 'Computer'
+                              AND c.`entities_id` IN ('0', '2')
+                             ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 1 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT '1-3 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 1 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 3 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT '3-5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 3 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT '> 5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT 'Undefined' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+            AND i.`warranty_date` IS NULL
+             AND c.`entities_id` IN ('0', '2')
+            
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:296 
+  marketplace/mreporting/inc/inventory.class.php:189 PluginMreportingInventory->computersByAge()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportPieComputersByAge()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181"} 
+[2023-12-06 11:14:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: SELECT '< 1 year' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                           FROM glpi_computers as c,
+                                glpi_infocoms  as i
+                           WHERE c.`id` = i.`items_id`
+                             AND c.`is_deleted` = 0
+                             AND c.`is_template` = 0
+                             AND itemtype = 'Computer'
+                              AND c.`entities_id` IN ('0', '2')
+                             ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 1 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT '1-3 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 1 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 3 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT '3-5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 3 YEAR
+           AND i.`warranty_date` > CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT '> 5 years' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+           AND i.`warranty_date` <= CURRENT_DATE - INTERVAL 5 YEAR
+            AND c.`entities_id` IN ('0', '2')
+           
+         UNION
+         SELECT 'Undefined' Age, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers c,  glpi_infocoms i
+                                    WHERE c.`id` = i.`items_id`
+                                    AND c.`is_deleted` = 0
+                                    AND c.`is_template` = 0
+                                    AND itemtype = 'Computer'
+                                     AND c.`entities_id` IN ('0', '2')
+                                    ) Percent
+         FROM glpi_computers as c,
+              glpi_infocoms  as i
+         WHERE c.`id` = i.`items_id`
+           AND c.`is_deleted` = 0
+           AND c.`is_template` = 0
+           AND itemtype = 'Computer'
+            AND i.`warranty_date` IS NULL
+             AND c.`entities_id` IN ('0', '2')
+            
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:296 
+  marketplace/mreporting/inc/inventory.class.php:194 PluginMreportingInventory->computersByAge()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportHbarComputersByAge()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181","mem_usage":"0.033\", 2.87Mio)"} 
+[2023-12-06 11:14:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: 
+ SELECT 'Windows' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Windows'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'Linux' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Linux|Ubuntu|openSUSE'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'Solaris' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Solaris'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'AIX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'AIX'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'BSD' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'BSD'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'VMWare' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'VMWare'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'MAC' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'MAC'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'Android' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Android'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'HP-UX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'HP-UX'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION
+         SELECT 'Outros' AS OS, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers        as c,
+                                         glpi_operatingsystems as os,
+                                         glpi_items_operatingsystems as ios
+                                    WHERE c.`is_deleted`= 0
+                                          AND c.`is_template`=0
+                                          AND ios.`operatingsystems_id` = os.`id`
+                                          AND ios.items_id = c.id
+                                           AND c.`entities_id` IN ('0', '2')
+                                          ) as Percent
+         FROM glpi_computers        as c,
+              glpi_operatingsystems as os,
+              glpi_items_operatingsystems as ios
+         WHERE ios.`operatingsystems_id` = os.`id`
+           AND ios.items_id = c.id
+           AND ios.itemtype = 'Computer'
+           AND c.`is_deleted` = 0
+           AND c.`is_template`=0
+            AND os.`name` NOT REGEXP 'Windows' AND os.`name` NOT REGEXP 'Linux|Ubuntu|openSUSE' AND os.`name` NOT REGEXP 'Solaris' AND os.`name` NOT REGEXP 'AIX' AND os.`name` NOT REGEXP 'BSD' AND os.`name` NOT REGEXP 'VMWare' AND os.`name` NOT REGEXP 'MAC' AND os.`name` NOT REGEXP 'Android' AND os.`name` NOT REGEXP 'HP-UX'
+            AND c.`entities_id` IN ('0', '2')
+            ORDER BY Total DESC
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:388 
+  marketplace/mreporting/inc/inventory.class.php:312 PluginMreportingInventory->computersByOS()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportPieComputersByOS()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181","mem_usage":"0.027\", 2.91Mio)"} 
+[2023-12-06 11:14:55] glpisqllog.WARNING: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 419
+  *** MySQL query warnings:
+  SQL: 
+ SELECT 'Windows' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Windows'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'Linux' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Linux|Ubuntu|openSUSE'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'Solaris' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Solaris'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'AIX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'AIX'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'BSD' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'BSD'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'VMWare' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'VMWare'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'MAC' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'MAC'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'Android' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'Android'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION 
+ SELECT 'HP-UX' AS OS, count(*) AS Total, count(*) * 100 / (SELECT count(*)
+                                                                        FROM glpi_computers        as c,
+                                                                             glpi_operatingsystems as os,
+                                                                             glpi_items_operatingsystems as ios
+                                                                        WHERE c.`is_deleted`='0' AND c.`is_template`='0'
+                                                                        AND ios.`operatingsystems_id` = os.`id`
+                                                                        AND ios.items_id = c.id
+                                                                        AND ios.itemtype = 'Computer'
+                                                                             AND c.`entities_id` IN ('0', '2')
+                                                                            ) AS Percent
+               FROM glpi_computers        as c,
+                    glpi_operatingsystems as os,
+                    glpi_items_operatingsystems as ios
+               WHERE ios.`operatingsystems_id` = os.`id`
+                     AND ios.items_id = c.id
+                     AND ios.itemtype = 'Computer'
+                     AND c.`is_deleted`='0'
+                     AND c.`is_template`='0'
+                     AND os.`name` REGEXP 'HP-UX'
+                      AND c.`entities_id` IN ('0', '2')
+                      UNION
+         SELECT 'Outros' AS OS, count(*) Total, count(*) * 100 / (SELECT count(*)
+                                    FROM glpi_computers        as c,
+                                         glpi_operatingsystems as os,
+                                         glpi_items_operatingsystems as ios
+                                    WHERE c.`is_deleted`= 0
+                                          AND c.`is_template`=0
+                                          AND ios.`operatingsystems_id` = os.`id`
+                                          AND ios.items_id = c.id
+                                           AND c.`entities_id` IN ('0', '2')
+                                          ) as Percent
+         FROM glpi_computers        as c,
+              glpi_operatingsystems as os,
+              glpi_items_operatingsystems as ios
+         WHERE ios.`operatingsystems_id` = os.`id`
+           AND ios.items_id = c.id
+           AND ios.itemtype = 'Computer'
+           AND c.`is_deleted` = 0
+           AND c.`is_template`=0
+            AND os.`name` NOT REGEXP 'Windows' AND os.`name` NOT REGEXP 'Linux|Ubuntu|openSUSE' AND os.`name` NOT REGEXP 'Solaris' AND os.`name` NOT REGEXP 'AIX' AND os.`name` NOT REGEXP 'BSD' AND os.`name` NOT REGEXP 'VMWare' AND os.`name` NOT REGEXP 'MAC' AND os.`name` NOT REGEXP 'Android' AND os.`name` NOT REGEXP 'HP-UX'
+            AND c.`entities_id` IN ('0', '2')
+            ORDER BY Total DESC
+  Warnings: 
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+1365: Division by 0
+  Backtrace :
+  marketplace/mreporting/inc/inventory.class.php:388 
+  marketplace/mreporting/inc/inventory.class.php:317 PluginMreportingInventory->computersByOS()
+  marketplace/mreporting/inc/common.class.php:644    PluginMreportingInventory->reportHbarComputersByOS()
+  ...nc/notificationtargetnotification.class.php:114 PluginMreportingCommon->showGraph()
+  ...inc/notificationtargetnotification.class.php:51 PluginMreportingNotificationTargetNotification->_buildPDF()
+  src/NotificationTarget.php:1360                    PluginMreportingNotificationTargetNotification->addDataForTemplate()
+  src/NotificationTemplate.php:278                   NotificationTarget->getForTemplate()
+  .../mreporting/inc/notificationevent.class.php:106 NotificationTemplate->getTemplateByLanguage()
+  ...place/mreporting/inc/notification.class.php:183 PluginMreportingNotificationEvent::raiseEvent()
+  src/CronTask.php:1018                              PluginMreportingNotification::cronSendNotifications()
+  front/cron.php:64                                  CronTask::launch()
+  {"user":"@ip-172-31-46-181","mem_usage":"0.004\", 2.90Mio)"} 
+[2023-12-11 10:32:26] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_costs_entities` (`entities_id`) VALUES (NULL)
+  Error: Column 'entities_id' cannot be null
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/costs/inc/entity.class.php:79          CommonDBTM->add()
+  marketplace/costs/inc/ticket.class.php:123         PluginCostsEntity->getFromDBByEntity()
+  src/Plugin.php:1681                                PluginCostsTicket::postItemForm()
+  ...plication/View/Extension/PluginExtension.php:67 Plugin::doHook()
+  ...tes/8a/8a84a98633283022a4a9855fe339faa5.php:372 Glpi\Application\View\Extension\PluginExtension->callPluginHook()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_35a44e5e6211858220028cfdebc069f0->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src/Ticket.php:4050                                Glpi\Application\View\TemplateRenderer->display()
+  src/TicketTemplate.php:163                         Ticket->showFormHelpdesk()
+  src/TicketTemplate.php:140                         TicketTemplate::showHelpdeskPreview()
+  src/CommonGLPI.php:691                             TicketTemplate::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:09:39] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:11:36] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:39:08] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:44:19] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:45:44] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:46:50] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:47:44] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 10:50:10] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:05:26] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:05:53] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:14:12] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:14:50] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:16:18] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:17:50] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:18:40] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:28:51] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:29:22] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:32:19] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 11:33:04] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 15:23:18] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-12 15:24:05] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-13 21:33:22] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-13 21:34:24] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-13 21:36:07] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 20:47:41] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('16')
+  Error: Duplicate entry '16-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 20:51:04] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('16')
+  Error: Duplicate entry '16-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 20:51:40] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('16')
+  Error: Duplicate entry '16-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:16:22] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:16:35] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:17:17] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:21:40] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:21:47] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:21:52] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:22:09] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:26:40] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:27:25] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-15 21:33:15] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 18:29:16] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 18:29:27] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('14')
+  Error: Duplicate entry '14-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 20:55:27] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('16')
+  Error: Duplicate entry '16-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 20:56:25] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('16')
+  Error: Duplicate entry '16-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 20:58:44] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('16')
+  Error: Duplicate entry '16-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:00:06] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('4')
+  Error: Duplicate entry '4-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:00:42] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:04:16] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:04:53] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:05:04] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:05:17] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:05:24] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:05:55] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:06:32] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:06:55] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:08:48] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:10:22] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-18 21:11:11] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-22 11:00:27] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-26 21:24:59] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-26 21:26:32] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('17')
+  Error: Duplicate entry '17-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 
+[2023-12-26 21:28:45] glpisqllog.ERROR: DBmysql::query() in /var/www/html/glpi/src/DBmysql.php line 379
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_plugin_mreporting_profiles` (`profiles_id`) VALUES ('4')
+  Error: Duplicate entry '4-0' for key 'profiles_id_reports'
+  Backtrace :
+  src/DBmysql.php:1349                               
+  src/CommonDBTM.php:722                             DBmysql->insert()
+  src/CommonDBTM.php:1323                            CommonDBTM->addToDB()
+  marketplace/mreporting/inc/profile.class.php:191   CommonDBTM->add()
+  marketplace/mreporting/inc/profile.class.php:87    PluginMreportingProfile->createAccess()
+  src/CommonGLPI.php:691                             PluginMreportingProfile::displayTabContentForItem()
+  src/CommonGLPI.php:654                             CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:116                           CommonGLPI::displayStandardTab()
+  {"user":"22@ip-172-31-46-181"} 

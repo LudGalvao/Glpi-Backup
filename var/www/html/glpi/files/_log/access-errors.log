@@ -1,0 +1,909 @@
+2023-10-22 10:58:40 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/calendar_holiday.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Calendar_Holiday ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/calendar_holiday.form.php:45 check()
+2023-10-22 10:58:40 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-10-23 10:17:42 [7@ip-172-31-46-181]
+CSRF check failed for User ID: 7 at /glpi/front/user.form.php?id=72023-10-23 10:17:45 [7@ip-172-31-46-181]
+User ID: 7 tried to access or perform an action on /glpi/front/user.form.php?id=7 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-25 02:27:03 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/front/profile_user.form.php2023-10-25 03:52:51 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/group_user.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Group_User ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/group_user.form.php:49 check()
+2023-10-25 03:52:52 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-10-25 04:14:48 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/front/massiveaction.php2023-10-25 13:39:25 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Group_User ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/user.form.php:152 check()
+2023-10-25 13:39:26 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-10-26 11:05:28 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/front/massiveaction.php2023-10-26 11:06:57 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=8&formoptions=data-track-changes%3Dtrue with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-26 11:07:23 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=10 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-26 11:07:28 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=12 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-26 11:07:33 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=9 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-26 11:08:13 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=12 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-26 11:08:36 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=10 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-27 01:11:44 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=6 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-27 10:14:54 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=10 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-27 10:15:03 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=6 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-30 09:59:47 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/entity.form.php?id=1 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/dropdown.common.form.php:176 displayFullPageForItem()
+		/var/www/html/glpi/front/entity.form.php:52 include()
+2023-10-30 10:14:17 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/entity.form.php?id=2 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/dropdown.common.form.php:176 displayFullPageForItem()
+		/var/www/html/glpi/front/entity.form.php:52 include()
+2023-10-30 10:18:33 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/group_user.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Group_User ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/group_user.form.php:49 check()
+2023-10-30 10:18:34 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-10-30 10:18:46 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/group_user.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Group_User ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/group_user.form.php:49 check()
+2023-10-30 10:18:47 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-10-31 10:24:26 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/marketplace/formcreator/front/targetticket.form.php?id=1 with insufficient rights. Additional information: Nenhuma informação adicional fornecida
+	Stack Trace:
+		/var/www/html/glpi/src/CommonGLPI.php:1189 displayRightError()
+		/var/www/html/glpi/marketplace/formcreator/front/targetticket.form.php:111 display()
+2023-10-31 12:03:04 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php?id=15 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-10-31 14:11:01 [2@ip-172-31-46-181]
+User ID: 2 tried to access a non-existent item /glpi/front/user.form.php. Additional information: 
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3009 displayNotFoundError()
+		/var/www/html/glpi/front/user.form.php:140 check()
+2023-10-31 14:28:25 [2@ip-172-31-46-181]
+User ID: 2 tried to access or perform an action on /glpi/front/user.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Group_User ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/user.form.php:152 check()
+2023-10-31 14:28:26 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-10-31 17:16:06 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/front/massiveaction.php2023-10-31 17:19:04 [2@ip-172-31-46-181]
+User ID: 2 tried to access a non-existent item /glpi/front/profile.form.php?id=9. Additional information: The item could not be found in the database
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6368 displayNotFoundError()
+		/var/www/html/glpi/src/CommonDBTM.php:6479 displayItemNotFoundPage()
+		/var/www/html/glpi/front/profile.form.php:99 displayFullPageForItem()
+2023-11-06 09:39:56 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/marketplace/formcreator/front/form.form.php?id=4& with insufficient rights. Additional information: User is missing the 2 (UPDATE) right for entity
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/marketplace/formcreator/front/form.form.php:129 checkRight()
+2023-11-06 09:39:56 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-11-06 09:39:58 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/marketplace/formcreator/front/form.form.php?id=5 with insufficient rights. Additional information: User is missing the 2 (UPDATE) right for entity
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/marketplace/formcreator/front/form.form.php:129 checkRight()
+2023-11-06 09:39:59 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-11-06 09:40:01 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/front/user.form.php2023-11-06 09:40:03 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/marketplace/formcreator/front/form.form.php?id=5 with insufficient rights. Additional information: User is missing the 2 (UPDATE) right for entity
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/marketplace/formcreator/front/form.form.php:129 checkRight()
+2023-11-06 09:40:04 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-11-06 09:40:05 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/front/user.form.php2023-11-06 09:41:55 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/user.form.php?id=10 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-11-06 15:54:53 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/formcreator/ajax/question.php2023-11-06 15:54:54 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-11-09 20:15:04 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/front/massiveaction.php2023-11-13 09:22:19 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/ajax/getDropdownValue.php2023-11-13 09:22:32 [2@ip-172-31-46-181]
+CSRF check failed for User ID: 2 at /glpi/front/group.form.php2023-11-14 11:19:55 [@ip-172-31-46-181]
+User ID:  tried to access a non-existent item /glpi/marketplace/formcreator/front/formdisplay.php?id=58. Additional information: 
+	Stack Trace:
+		/var/www/html/glpi/marketplace/formcreator/front/formdisplay.php:52 displayNotFoundError()
+2023-11-16 09:26:44 [@ip-172-31-46-181]
+User ID:  tried to access a non-existent item /glpi/marketplace/formcreator/front/formdisplay.php?id=58. Additional information: 
+	Stack Trace:
+		/var/www/html/glpi/marketplace/formcreator/front/formdisplay.php:52 displayNotFoundError()
+2023-11-28 02:37:20 [33@ip-172-31-46-181]
+CSRF check failed for User ID: 33 at /glpi/front/entity.form.php2023-12-04 11:31:58 [38@ip-172-31-46-181]
+User ID: 38 tried to access or perform an action on /glpi/front/user.form.php?id=38 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-05 14:49:34 [39@ip-172-31-46-181]
+CSRF check failed for User ID: 39 at /glpi/front/user.form.php?id=392023-12-05 14:49:37 [39@ip-172-31-46-181]
+User ID: 39 tried to access or perform an action on /glpi/front/user.form.php?id=39 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-05 15:16:01 [39@ip-172-31-46-181]
+User ID: 39 tried to access or perform an action on /glpi/front/user.form.php?id=39 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-05 16:37:24 [@ip-172-31-46-181]
+User ID:  tried to access or perform an action on /glpi/marketplace/formcreator/front/issue.php with insufficient rights. Additional information: Nenhuma informação adicional fornecida
+	Stack Trace:
+		/var/www/html/glpi/marketplace/formcreator/front/issue.php:40 displayRightError()
+2023-12-05 16:42:18 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-05 16:42:19 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 16:42:20 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-05 16:42:21 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 16:43:12 [@ip-172-31-46-181]
+User ID:  tried to access a non-existent item /glpi/marketplace/formcreator/front/formdisplay.php?id=58. Additional information: 
+	Stack Trace:
+		/var/www/html/glpi/marketplace/formcreator/front/formdisplay.php:52 displayNotFoundError()
+2023-12-05 16:46:56 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:38:40 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:42:00 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:42:31 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:46:14 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:52:23 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:52:34 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php with insufficient rights. Additional information: User failed a can* method check for right 2 (Update) on item Type: Profile ID: 14
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:83 check()
+2023-12-05 20:52:34 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 20:53:10 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:53:27 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:57:07 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 20:59:07 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 21:00:37 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 21:02:07 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 21:02:29 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php with insufficient rights. Additional information: User failed a can* method check for right 2 (Update) on item Type: Profile ID: 14
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:83 check()
+2023-12-05 21:02:29 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 21:02:48 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 21:04:29 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 21:05:30 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-05 21:05:50 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-05 21:05:51 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 21:05:53 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/front/user.form.php2023-12-05 21:05:56 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-05 21:05:56 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 21:05:57 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-05 21:05:57 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 21:05:58 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-05 21:05:58 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 21:05:59 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-05 21:05:59 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-05 21:06:01 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/front/user.form.php2023-12-05 21:06:10 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-06 11:21:40 [40@ip-172-31-46-181]
+User ID: 40 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-06 11:39:53 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-06 12:08:53 [41@ip-172-31-46-181]
+User ID: 41 tried to access or perform an action on /glpi/front/user.php with insufficient rights. Additional information: User is missing the 1 (READ) right for user
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/user.php:38 checkRight()
+2023-12-06 12:08:55 [41@ip-172-31-46-181]
+CSRF check failed for User ID: 41 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-06 12:09:41 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-06 12:15:30 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-07 19:05:27 [39@ip-172-31-46-181]
+User ID: 39 tried to access or perform an action on /glpi/front/user.form.php?id=18 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-08 09:56:51 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/calendar_holiday.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Calendar_Holiday ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/calendar_holiday.form.php:45 check()
+2023-12-08 09:56:51 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-08 10:12:47 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/calendar_holiday.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Calendar_Holiday ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/calendar_holiday.form.php:45 check()
+2023-12-08 10:12:48 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-08 10:19:22 [22@ip-172-31-46-181]
+User ID: 22 tried to access a non-existent item /glpi/front/holiday.form.php?id=11. Additional information: The item could not be found in the database
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6368 displayNotFoundError()
+		/var/www/html/glpi/src/CommonDBTM.php:6479 displayItemNotFoundPage()
+		/var/www/html/glpi/front/dropdown.common.form.php:176 displayFullPageForItem()
+		/var/www/html/glpi/front/holiday.form.php:39 include()
+2023-12-12 10:09:12 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:12:12 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:12:54 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:42:42 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:43:17 [@ip-172-31-46-181]
+CSRF check failed for User ID:  at /glpi/marketplace/formcreator/ajax/showfields.php2023-12-12 10:44:20 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:45:18 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:50:12 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:51:12 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 10:51:49 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:04:32 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:04:47 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:05:54 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:09:19 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:09:22 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/user.form.php?id=10 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-12 11:09:23 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/user.form.php?id=10 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-12 11:09:57 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:10:16 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:13:47 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:14:52 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:15:52 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-12 11:15:58 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-12 11:15:59 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/front/user.form.php2023-12-12 11:16:01 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-12 11:16:02 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-12 11:16:03 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-12 11:16:04 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-12 11:16:04 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-12 11:16:05 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-12 11:16:06 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-12 11:17:55 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:18:56 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:21:25 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:27:09 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:27:58 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/slm.php?criteria%5B0%5D%5Bfield%5D=view&criteria%5B0%5D%5Blink%5D=contains&criteria%5B0%5D%5Bvalue%5D=&reset=reset with insufficient rights. Additional information: User is missing the 1 (Read) right for slm
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/slm.php:42 checkRight()
+2023-12-12 11:27:59 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-12 11:29:23 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:29:41 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:31:46 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:33:07 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:33:25 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 11:35:25 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 12:06:23 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 12:08:38 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 12:09:50 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 12:09:53 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/user.form.php?id=10 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-12 12:09:54 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/user.php with insufficient rights. Additional information: User is missing the 1 (Read) right for user
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/user.php:38 checkRight()
+2023-12-12 12:09:54 [10@ip-172-31-46-181]
+CSRF check failed for User ID: 10 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-12 12:09:55 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/user.form.php?id=39 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-12 12:33:50 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 14:50:04 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 15:10:09 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 15:14:43 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 15:22:14 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 15:22:29 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/user.form.php?id=39 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-12 15:24:16 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 17:16:19 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-12 17:22:56 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-13 09:43:10 [10@ip-172-31-46-181]
+User ID: 10 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-13 10:42:31 [48@ip-172-31-46-181]
+User ID: 48 tried to access or perform an action on /glpi/front/profile.form.php with insufficient rights. Additional information: User is missing the 1 (READ) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-13 10:42:32 [48@ip-172-31-46-181]
+CSRF check failed for User ID: 48 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-13 10:47:08 [48@ip-172-31-46-181]
+User ID: 48 tried to access or perform an action on /glpi/front/profile.form.php with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-13 10:47:08 [48@ip-172-31-46-181]
+CSRF check failed for User ID: 48 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-13 10:47:10 [48@ip-172-31-46-181]
+User ID: 48 tried to access or perform an action on /glpi/front/profile.form.php?id=15 with insufficient rights. Additional information: User is missing the 1 (Read) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-13 10:47:11 [48@ip-172-31-46-181]
+CSRF check failed for User ID: 48 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-13 21:39:37 [79@ip-172-31-46-181]
+User ID: 79 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-13 21:42:10 [79@ip-172-31-46-181]
+User ID: 79 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 09:26:25 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 20:41:06 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 20:43:25 [79@ip-172-31-46-181]
+User ID: 79 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 20:48:02 [79@ip-172-31-46-181]
+User ID: 79 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 20:55:29 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 21:16:51 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 21:18:40 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 21:20:14 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 21:20:26 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 21:20:30 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/user.form.php?id=73 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-15 21:20:30 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/ticket.form.php with insufficient rights. Additional information: Missing CREATE right. Cannot view the new item form.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6469 displayAccessDeniedPage()
+		/var/www/html/glpi/front/ticket.form.php:290 displayFullPageForItem()
+2023-12-15 21:34:22 [77@ip-172-31-46-181]
+User ID: 77 tried to access or perform an action on /glpi/ajax/dropdownRubDocument.php with insufficient rights. Additional information: The current profile does not use the standard interface
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:985 displayRightError()
+		/var/www/html/glpi/ajax/dropdownRubDocument.php:43 checkCentralAccess()
+2023-12-15 21:36:15 [73@ip-172-31-46-181]
+User ID: 73 tried to access or perform an action on /glpi/front/user.form.php?id=77 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-15 21:39:09 [77@ip-172-31-46-181]
+User ID: 77 tried to access or perform an action on /glpi/front/user.php with insufficient rights. Additional information: User is missing the 1 (READ) right for user
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/user.php:38 checkRight()
+2023-12-15 21:39:10 [77@ip-172-31-46-181]
+CSRF check failed for User ID: 77 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-15 21:39:13 [77@ip-172-31-46-181]
+CSRF check failed for User ID: 77 at /glpi/front/user.form.php2023-12-15 21:39:17 [77@ip-172-31-46-181]
+User ID: 77 tried to access or perform an action on /glpi/front/user.php with insufficient rights. Additional information: User is missing the 1 (READ) right for user
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/user.php:38 checkRight()
+2023-12-15 21:39:17 [77@ip-172-31-46-181]
+User ID: 77 tried to access or perform an action on /glpi/front/profile.form.php?id=14 with insufficient rights. Additional information: User is missing the 1 (READ) right for profile
+	Stack Trace:
+		/var/www/html/glpi/src/Session.php:1109 displayRightError()
+		/var/www/html/glpi/front/profile.form.php:40 checkRight()
+2023-12-15 21:39:19 [77@ip-172-31-46-181]
+CSRF check failed for User ID: 77 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-18 09:23:57 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/user.form.php?id=67 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-18 09:24:02 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/user.form.php?id=67 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-18 09:43:35 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/user.form.php?id=67 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-18 09:44:15 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/user.form.php?id=67 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-18 09:51:10 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/group_user.form.php with insufficient rights. Additional information: User failed a can* method check for right 4 (CREATE) on item Type: Group_User ID: -1
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:3018 displayRightError()
+		/var/www/html/glpi/front/group_user.form.php:49 check()
+2023-12-18 09:51:10 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/marketplace/jsaddons/ajax/jsaddons.php2023-12-18 10:09:54 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/marketplace/formcreator/front/formanswer.form.php?id=29 with insufficient rights. Additional information: Nenhuma informação adicional fornecida
+	Stack Trace:
+		/var/www/html/glpi/marketplace/formcreator/front/formanswer.form.php:70 displayRightError()
+2023-12-18 10:15:42 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/marketplace/formcreator/front/formanswer.form.php?id=29 with insufficient rights. Additional information: Nenhuma informação adicional fornecida
+	Stack Trace:
+		/var/www/html/glpi/marketplace/formcreator/front/formanswer.form.php:70 displayRightError()
+2023-12-18 18:29:23 [70@ip-172-31-46-181]
+User ID: 70 tried to access or perform an action on /glpi/front/user.form.php?id=85 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-18 21:05:09 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/front/profile.form.php2023-12-18 21:08:23 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/front/profile.form.php2023-12-18 21:08:23 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/front/profile.form.php2023-12-18 21:08:23 [22@ip-172-31-46-181]
+CSRF check failed for User ID: 22 at /glpi/front/profile.form.php2023-12-19 17:54:30 [65@ip-172-31-46-181]
+User ID: 65 tried to access or perform an action on /glpi/front/user.form.php?id=65 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-19 17:56:43 [65@ip-172-31-46-181]
+User ID: 65 tried to access or perform an action on /glpi/front/user.form.php?id=65 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()
+2023-12-26 21:20:23 [22@ip-172-31-46-181]
+User ID: 22 tried to access or perform an action on /glpi/front/user.form.php?id=85 with insufficient rights. Additional information: Missing READ right. Cannot view the item.
+	Stack Trace:
+		/var/www/html/glpi/src/CommonDBTM.php:6392 displayRightError()
+		/var/www/html/glpi/src/CommonDBTM.php:6485 displayAccessDeniedPage()
+		/var/www/html/glpi/front/user.form.php:251 displayFullPageForItem()

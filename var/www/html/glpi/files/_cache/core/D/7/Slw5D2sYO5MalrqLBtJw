@@ -1,0 +1,3 @@
+1704329942
+c284c5b3c29fc5bd1abb50f1d88d08007d8d26ff
+a:4:{s:8:"is_valid";b:1;s:18:"validation_message";s:30:"The registration key is valid.";s:5:"owner";a:1:{s:4:"name";s:3:"Lud";}s:12:"subscription";a:6:{s:15:"offer_reference";s:7:"virtual";s:5:"title";s:10:"Registrado";s:10:"is_running";b:1;s:10:"begin_date";N;s:8:"end_date";N;s:8:"features";a:0:{}}}
