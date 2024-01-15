@@ -7,6 +7,18 @@
 - Douglas Delfino  [Linkedln](https://www.linkedin.com/in/douglas-delfino-b305211ab/)
 
 ## Informações do GLPI
-### Versão utilizada do glpi - 
-### Sistema operacional utilizado: Ubuntu Server 22.04 LTS
-
+### Versão utilizada do glpi - 10.0.10
+### Sistema operacional utilizado - Ubuntu Server 22.04 LTS
+### Plugins utilizados:
++ Alertas
++ Form Creator
++ JS addons
++ Campos Adicionais
++ Gapp Essentials
++ Mais Relatórios
++ Comportamentos
++ Importação de dados
++ Mais satisfação
++ Costs
++ Imprimir em PDF
++ Oauth IMAP
