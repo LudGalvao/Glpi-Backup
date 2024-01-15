@@ -5,3 +5,8 @@
 - Luiz Monteiro  [Linkedln](https://www.linkedin.com/in/luiz-felipe-monteiro/)
 - Marcelo Cassar  [Linkedln](https://www.linkedin.com/in/marcelo-richter-cassar-b4577932/)
 - Douglas Delfino  [Linkedln](https://www.linkedin.com/in/douglas-delfino-b305211ab/)
+
+## Informações do GLPI
+### Versão utilizada do glpi - 
+### Sistema operacional utilizado: Ubuntu Server 22.04 LTS
+
